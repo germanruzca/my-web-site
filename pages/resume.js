@@ -8,7 +8,7 @@ export default function AboutMe() {
       <div className={styles.container}>
         <h1 className={styles.title}>About Me</h1>
         <p className={styles.about_me}>
-          I’m German. I'm a 22 years old student from Colima, Mexico.
+          I&prime;m German. I'm a 22 years old student from Colima, Mexico.
         </p>
         <p className={styles.about_me}>
           I like learning every day with the new technologies. I'm interested in Web Technologies and Data Science, I'd like to match these two areas in my carreer in the future. I'm always looking for something new to do, immerse in new challenges. I also like listen to music, read articles and been fitness.
