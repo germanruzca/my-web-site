@@ -18,7 +18,7 @@ export default function AboutMe({ posts }) {
         <div className={styles.posts}>
           {
             posts.map((post) => (
-              <PostCard post={post}/>
+              <PostCard key={post.id} post={post}/>
             ))
           }
         </div>

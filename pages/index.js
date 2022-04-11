@@ -32,22 +32,22 @@ export default function Home() {
         </div>
         <div className={styles.icon}>
           <div>
-            <a href="https://twitter.com/germanruzca" target="_blank">
+            <a href="https://twitter.com/germanruzca" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faTwitter}/>
             </a>
           </div>
           <div>
-            <a href="https://github.com/germanruzca" target="_blank">
+            <a href="https://github.com/germanruzca" target="_blank"  rel="noopener noreferrer">
               <FontAwesomeIcon icon={faGithub}/>
             </a>
           </div>
           <div>
-            <a href="https://www.instagram.com/germanruzca/" target="_blank">
+            <a href="https://www.instagram.com/germanruzca/" target="_blank"  rel="noopener noreferrer">
               <FontAwesomeIcon icon={faInstagram}/>
             </a>
           </div>
           <div>
-            <a href="https://www.linkedin.com/in/germanruzca/" target="_blank">
+            <a href="https://www.linkedin.com/in/germanruzca/" target="_blank"  rel="noopener noreferrer">
               <FontAwesomeIcon icon={faLinkedin}/>
             </a>
           </div>
