@@ -12,7 +12,9 @@ export default function AboutMe({ posts }) {
     <div>
       <Header/>
       <main className={styles.container}>
-        <div className={styles.last_posts}>Ultimos posts</div>
+        <div className={styles.last_posts}>
+          Ultimos posts
+        </div>
         <div className={styles.posts}>
           {
             posts.map((post) => (

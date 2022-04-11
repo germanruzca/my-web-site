@@ -1,13 +1,19 @@
 import { MDXRemote } from 'next-mdx-remote';
 import { getFileBySlug, getFiles } from '../lib/mdx';
 import MDXComponents from '../components/MDXComponents'
-import {Header} from '../components';
+import { Header } from '../components';
+import styles from '../styles/Post.module.css';
+import { Layout } from '../components/Layout';
 
 export default function Post({ source, frontmatter}) {
   return (
     <div>
       <Header/>
-      <MDXRemote {...source} components={MDXComponents}/>
+      <div className={styles.container}>
+        <Layout metadata={frontmatter}>
+          <MDXRemote {...source} components={MDXComponents}/>
+        </Layout>
+      </div>
     </div>
   )
 }

@@ -1,0 +1,46 @@
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+
+}
+
+.about_me {
+  font-size: 18px;
+  text-align: justify;
+}
+
+.title {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.image {
+  text-align: center;
+}
+
+.image img {
+  width: 30%;
+  height: auto;
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    margin: 20px;
+  }
+
+  .title {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .about_me {
+    font-size: 15px;
+  }
+
+  .image img {
+    width: 100%;
+    height: auto;
+  }
+  
+}

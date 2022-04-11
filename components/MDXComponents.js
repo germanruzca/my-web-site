@@ -3,5 +3,5 @@ import { Header } from './Header'
 
 export default {
   Podcast,
-  Header
+  Header,
 }

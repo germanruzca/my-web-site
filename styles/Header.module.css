@@ -1,11 +1,33 @@
 .container {
   display: flex;
   font-size: 36px;
-  font-weight: 300;
+  font-weight: 700;
   justify-content: center;
-  padding: 100px 100px 0 100px;
+  padding-top: 100px;
 }
 
 .container div {
   margin: 20px;
+}
+
+.route_color {
+  color: #E5BD59;
+}
+
+.no_route_color {
+  color: black
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    display: flex;
+    font-size: 26px;
+    font-weight: 600;
+    justify-content: center;
+    padding-top: 30px;
+  }
+
+  .container div {
+    margin: 5px;
+  }
 }
