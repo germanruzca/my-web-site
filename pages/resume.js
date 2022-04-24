@@ -24,7 +24,7 @@ export default function AboutMe() {
         </p>
 
         <p>
-          Currently Reading: <strong><a href="https://www.amazon.com.mx/Atomic-Habits-Proven-Build-Break/dp/0735211299/ref=sr_1_1?__mk_es_MX=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1852F2LCIUYLA&keywords=Atomic+Habits&qid=1650819374&sprefix=atomic+habits%2Caps%2C115&sr=8-1" target="_blank">Atomic Habits</a></strong>
+          Currently Reading: <strong><a href="https://www.amazon.com.mx/Atomic-Habits-Proven-Build-Break/dp/0735211299/ref=sr_1_1?__mk_es_MX=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1852F2LCIUYLA&keywords=Atomic+Habits&qid=1650819374&sprefix=atomic+habits%2Caps%2C115&sr=8-1" target="_blank" rel="noreferrer">Atomic Habits</a></strong>
         </p>
 
         <div className={styles.image}>
