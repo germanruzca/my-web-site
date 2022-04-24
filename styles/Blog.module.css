@@ -10,6 +10,13 @@
   font-weight: 400;
 }
 
+.noposts {
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 50px;
+  color: #cccccc;
+}
+
 @media screen and (max-width: 450px) {
   .container {
     margin: 20px;
