@@ -8,22 +8,6 @@ import styles from '../styles/Blog.module.css';
 import { getAllFilesMetaData } from '../lib/mdx';
 
 export default function AboutMe({ posts }) {
-  var toRender;
-  if (posts.length > 0) {
-    toRender = 
-    (
-      <div className={styles.posts}>
-        {
-            posts.map((post) => (
-              <PostCard key={post.id} post={post}/>
-            ))
-        }
-      </div>
-  )
-  }
-  else {
-    toRender = (<h1 className={styles.noposts}>No posts</h1>)
-  }
   return (
     <div>
       <Head>
@@ -36,9 +20,13 @@ export default function AboutMe({ posts }) {
         <div className={styles.last_posts}>
           Ultimos posts
         </div>
-        {
-          toRender
-        }
+        <div className={styles.posts}>
+          {
+              posts.map((post) => (
+                <PostCard key={post.id} post={post}/>
+              ))
+          }
+        </div>
       </main>
     </div>
   );
