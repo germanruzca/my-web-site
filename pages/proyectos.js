@@ -10,7 +10,7 @@ export default function Proyectos() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
-      <h1>Proyectos</h1>
+      <h1>Working in this...🔧</h1>
     </div>
   );
 }
