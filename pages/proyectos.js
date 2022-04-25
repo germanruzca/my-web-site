@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import styles from '../styles/Project.module.css';
 import {Header} from '../components/Header'
 
 export default function Proyectos() {
@@ -10,7 +11,9 @@ export default function Proyectos() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
-      <h1>Working in this...🔧</h1>
+      <div className={styles.container}>
+        <h1 className={styles.title}>Work in progress...🔧</h1>
+      </div>
     </div>
   );
 }

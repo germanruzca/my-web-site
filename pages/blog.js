@@ -4,10 +4,11 @@ import Link from 'next/link'
 import { Header } from '../components/Header'
 import { PostCard } from '../components/PostCard'
 import styles from '../styles/Blog.module.css';
+import readingTime from "reading-time";
 
 import { getAllFilesMetaData } from '../lib/mdx';
 
-export default function AboutMe({ posts }) {
+export default function Blog({ posts }) {
   return (
     <div>
       <Head>
