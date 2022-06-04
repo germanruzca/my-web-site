@@ -1,5 +1,5 @@
 .card {
-  background-color: #efefef;
+  background-color: #fff;
   width: 600px;
   height: fit-content;
   cursor: pointer;
@@ -17,7 +17,6 @@
 }
 
 .arrow_icon {
-  /* margin: 0px; */
   cursor: pointer;
 }
 

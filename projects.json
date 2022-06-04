@@ -1,0 +1,15 @@
+{
+  "projects" : [
+    {
+      "id": 1,
+      "name": "coli-market",
+      "image": "https://raw.githubusercontent.com/germanruzca/images/master/colimarket.png",
+      "description": "Coli-market fue un proyecto hecho en el bootcamp de BrightCoders Academy. Con el propostio de entender la tecnolgia de Rails. \nEs una e-commerce local, donde esta enfocada ayudar a los comerciantes locales de la comunidad de Colima.",
+      "technologies" : [
+        "Ruby", "Rails", "PostgreSQL", "HTML", "CSS", "JavaScript", "Bootstrap", "Git", "Heroku"
+      ],
+      "link": "https://coli-market.herokuapp.com/",
+      "github": "https://github.com/BC-MAY-21-ROR/proyecto-final-k8-f22-t2-local-e-commerce"
+    }
+  ]
+}

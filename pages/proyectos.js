@@ -1,8 +1,11 @@
 import Head from 'next/head';
 import styles from '../styles/Project.module.css';
 import {Header} from '../components/Header'
+import { ProjectCard } from '../components/ProjectCard';
+import data from '../projects.json'
 
 export default function Proyectos() {
+
   return (
     <div>
       <Head>
@@ -12,7 +15,11 @@ export default function Proyectos() {
       </Head>
       <Header/>
       <div className={styles.container}>
-        <h1 className={styles.title}>Work in progress...🔧</h1>
+       { 
+        data.projects.map((project, index) => (
+          <ProjectCard data={project} key={index}/> 
+        ))
+      }
       </div>
     </div>
   );

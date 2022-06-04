@@ -17,6 +17,7 @@ export {
   ImInstagram as IconInstagram,
   ImTwitter as IconTwitter,
   ImGithub as IconGithub,
+  ImNewTab as IconNewTab,
 } from "react-icons/im";
 
 export {
