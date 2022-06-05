@@ -26,16 +26,16 @@ const Component = ({data}) => {
       </div>
       <div className={styles.card__links}>
         <div className={styles.card__links__each}>
-          <h3>
+          <div className={styles.links__card}>
             <a href={data.github} target="_blank" rel="noopener noreferrer">
               <IconGithub/> Repositorio
             </a>
-          </h3>
-          <h3>
-            <a href={data.github} target="_blank" rel="noopener noreferrer">
+          </div>
+          <div className={styles.links__card}>
+            <a href={data.demo} target="_blank" rel="noopener noreferrer">
               <IconNewTab/> Demo
             </a>
-          </h3>
+          </div>
         </div>
       </div>
     </div>
