@@ -14,6 +14,7 @@ export default function Proyectos() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
+      <h1 className={styles.title}>Portafolio</h1>
       <div className={styles.container}>
        { 
         data.projects.map((project, index) => (

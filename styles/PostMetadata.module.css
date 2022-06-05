@@ -1,0 +1,29 @@
+.metadata__icons {
+  display: flex;
+  align-items: center;
+}
+
+.metadata__icons > svg {
+  margin-right: 5px;
+}
+
+.metadata__title__post {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.metadata__post__icons {
+  display: flex;
+}
+.metadata__post__icons > div {
+  margin-right: 10px;
+  color: #797C80;
+}
+
+
+@media screen and (max-width: 450px) {
+  .metadata__title__post {
+    text-align: center;
+    font-size: 20px;
+  }
+}
