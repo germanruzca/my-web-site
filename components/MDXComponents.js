@@ -1,4 +1,4 @@
-import CustomCode from "./customCodeBlock";
+import CustomCode from "./CustomCodeBlock";
 import {CustomImage} from "./CustomImage";
 
 export const MDXComponents = {

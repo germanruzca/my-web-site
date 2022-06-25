@@ -30,7 +30,6 @@ const CustomCode = props => {
     const className = props.children.props.className || '';
     const code = props.children.props.children.trim();
     const language = className.replace(/language-/, '');
-
     return (
         <Highlight
             {...defaultProps}
