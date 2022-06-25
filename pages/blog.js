@@ -19,8 +19,11 @@ export default function Blog({ posts }) {
       <Header/>
       <main className={styles.container}>
         <div className={styles.last_posts}>
-          Ultimos posts
+          Posts
         </div>
+          <div className={styles.description}>
+              Bienvenido a mi blog, aqui podras escontrar mis escritos sobre diferentes temas que pueden resultar de tu agrado.
+          </div>
         <div className={styles.posts}>
           {
               posts.map((post) => (

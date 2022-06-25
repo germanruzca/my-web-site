@@ -3,7 +3,6 @@
   font-size: 36px;
   font-weight: 700;
   justify-content: center;
-  padding-top: 100px;
 }
 
 .container div {
@@ -11,7 +10,7 @@
 }
 
 .route_color {
-  color: #E5BD6F;
+  color: #EABE7F;
 }
 
 .no_route_color {

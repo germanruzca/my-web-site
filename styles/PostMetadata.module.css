@@ -9,15 +9,22 @@
 
 .metadata__title__post {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 38px;
+}
+
+.metadata__title__post h2 {
+  margin: 0;
+  color: #231F20;
+  margin-bottom: 20px;
 }
 
 .metadata__post__icons {
   display: flex;
+  font-weight: 700;
 }
 .metadata__post__icons > div {
   margin-right: 10px;
-  color: #797C80;
+  color: #231F20;
 }
 
 

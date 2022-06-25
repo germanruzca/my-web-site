@@ -3,6 +3,11 @@
   margin: 0 auto;
 }
 
+.post_content {
+  text-align: justify;
+  line-height: 25px;
+  margin-top: 80px;
+}
 
 @media screen and (max-width: 450px) {
   .container {
