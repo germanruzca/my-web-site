@@ -3,12 +3,14 @@ import { IconCalendar, IconClock, IconYoutube } from "../icons";
 import { formatDate } from "../../lib/format_date";
 import Link from 'next/link'
 import readingTime from "reading-time";
+import { useMediaQuery } from '@chakra-ui/react'
 
 const Component = ({post}) => {
+  const [isSmallerThan450] = useMediaQuery('(max-width: 450px)')
   return (
     <Link key={post.slug} href={post.isVideo ? `https://www.youtube.com/watch?v=${post.videoLink}` : `/${post.slug}`}>
       <a target={`${post.isVideo ? '_blank' : ''}`}>
-        <PostCard>
+        <PostCard mobile={isSmallerThan450}>
           <div>
             <VerticalLine>
               <div></div>

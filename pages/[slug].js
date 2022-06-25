@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import { MDXRemote } from 'next-mdx-remote';
 import { getFileBySlug, getFiles } from '../lib/mdx';
-import MDXComponents from '../components/MDXComponents'
 import { Header } from '../components';
 import { LayoutPost } from '../components';
+
 
 export default function Post({ source, frontmatter}) {
   return (
@@ -17,7 +17,7 @@ export default function Post({ source, frontmatter}) {
       <Header/>
       <div>
         <LayoutPost metadata={frontmatter}>
-          <MDXRemote {...source} components={MDXComponents}/>
+          <MDXRemote {...source}/>
         </LayoutPost>
       </div>
     </div>

@@ -7,7 +7,7 @@ import { useMediaQuery } from '@chakra-ui/react'
 import { getAllFilesMetaData } from '../lib/mdx';
 
 export default function Blog({ posts }) {
-    const [isSmallerThan450] = useMediaQuery('(max-width: 450px)')
+    const [isSmallerThan450] = useMediaQuery('(max-width: 450px)');
   return (
     <div>
       <Head>
@@ -22,7 +22,7 @@ export default function Blog({ posts }) {
         <div>
           {
               posts.map((post) => (
-                <PostCard key={post.id} post={post} />
+                <PostCard key={post.id} post={post} style={{'margin-top': '20px'}}/>
               ))
           }
         </div>

@@ -7,7 +7,7 @@ export const PostCard = styled.div`
   cursor: pointer;
   border-radius: 10px;
   color:${props => props.theme.colors.black};
-  margin: 30px 0;
+  margin: 30px 0 ${props => props.mobile ? '45px' : '0'} 0;
   display: flex;
   justify-content: space-between;
 
