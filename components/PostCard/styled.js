@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
 export const PostCard = styled.div`
-  background-color: #fff;
+  background-color: ${props => props.theme.colors.white};
   width: 600px;
   height: fit-content;
   cursor: pointer;
   border-radius: 10px;
-  color: #000;
+  color:${props => props.theme.colors.black};
   margin: 30px 0;
   display: flex;
   justify-content: space-between;
@@ -18,7 +18,7 @@ export const PostCard = styled.div`
 
 export const VerticalLine = styled.div`
   > div {
-    border-right: 6px solid #E5BD6F;
+    border-right: 6px solid ${props => props.theme.colors.secondColorPage};
     height: 80px;
     position: absolute;
   }
