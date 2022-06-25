@@ -1,8 +1,8 @@
-import { IconCalendar, IconComment, IconClock } from "./icons";
-import styles from "../styles/PostMetadata.module.css";
-import { formatDate } from "../lib/format_date";
+import { IconCalendar, IconComment, IconClock } from "../icons";
+import styles from "../../styles/PostMetadata.module.css";
+import { formatDate } from "../../lib/format_date";
 
-export const PostMetadata = ({ metadata }) => {
+export const Component = ({ metadata }) => {
   return (
     <div>
       <div className={styles.metadata__title__post}>
@@ -21,3 +21,6 @@ export const PostMetadata = ({ metadata }) => {
     </div>
   );
 }
+
+export { Component as PostMetadata};
+export default Component;

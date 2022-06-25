@@ -1,10 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link'
-import { Header } from '../components/Header'
-import { PostCard } from '../components/PostCard'
+import { PostCard, Header } from '../components'
 import styles from '../styles/Blog.module.css';
-import readingTime from "reading-time";
 
 import { getAllFilesMetaData } from '../lib/mdx';
 
