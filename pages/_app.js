@@ -15,7 +15,6 @@ function MyApp({ Component, pageProps }) {
           <MDXProvider components={MDXComponents}>
             <Component {...pageProps} />
           </MDXProvider>
-          <Text bottom={0} left={0}  textAlign={'center'} width={'100%'}>Hola</Text>
       </ThemeProvider>
   )
 }
