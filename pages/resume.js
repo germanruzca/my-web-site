@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import { Header } from '../components'
-import styles from '../styles/Resume.module.css'
-import { Text, Box, useMediaQuery } from "@chakra-ui/react";
+import { Text, Box, useMediaQuery, Image } from "@chakra-ui/react";
 
 export default function AboutMe() {
   const [isSmallerThan450] = useMediaQuery('(max-width: 450px)');
@@ -58,9 +57,9 @@ export default function AboutMe() {
             Puedes ver mi CV dando click <a href={'/'}>AQUI</a>
           </Text>
         </Box>
-        <div className={styles.image}>
-          <img src="https://avatars.githubusercontent.com/u/43076503?v=4" alt="me"/>
-        </div>
+        <Box textAlign={"center"} >
+          <Image width={isSmallerThan450 ? '100%' : '30%'} height={'auto'} src="https://avatars.githubusercontent.com/u/43076503?v=4" alt="me"/>
+        </Box>
       </Box>
     </div>
   );
