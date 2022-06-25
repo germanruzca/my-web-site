@@ -22,7 +22,7 @@ export default function Blog({ posts }) {
         <div>
           {
               posts.map((post) => (
-                <PostCard key={post.id} post={post}/>
+                <PostCard key={post.id} post={post} />
               ))
           }
         </div>
