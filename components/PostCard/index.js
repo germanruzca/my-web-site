@@ -1,4 +1,3 @@
-import styles from '../../styles/PostCard.module.css';
 import { PostCard, Title, VerticalLine, CardInfo, CardIcons, EachIcon } from './styled'
 import { IconCalendar, IconComment, IconClock } from "../icons";
 import { formatDate } from "../../lib/format_date";
@@ -19,11 +18,11 @@ const Component = ({post}) => {
             <CardIcons>
               <EachIcon>
                 <IconCalendar/>
-                <p className={styles.icons}>{formatDate(post.date)}</p>
+                <p>{formatDate(post.date)}</p>
               </EachIcon>
               <EachIcon>
                 <IconClock/>
-                <p className={styles.icons}>{parseInt((readingTime(post.content).minutes))} min</p>
+                <p>{parseInt((readingTime(post.content).minutes))} min</p>
               </EachIcon>
             </CardIcons>
           </CardInfo>
