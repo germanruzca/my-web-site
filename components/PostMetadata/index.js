@@ -1,23 +1,23 @@
 import { IconCalendar, IconComment, IconClock } from "../icons";
-import styles from "../../styles/PostMetadata.module.css";
 import { formatDate } from "../../lib/format_date";
+import { Title, Icons} from './styled'
 
 export const Component = ({ metadata }) => {
   return (
     <div>
-      <div className={styles.metadata__title__post}>
+      <Title>
         <h2>{metadata.title}</h2>
-      </div>
-      <div className={styles.metadata__post__icons}>
-        <div className={styles.metadata__icons}>
+      </Title>
+      <Icons>
+        <div>
           <IconCalendar/>
           {formatDate(metadata.date)}
         </div>
-        <div className={styles.metadata__icons}>
+        <div>
           <IconClock/>
           {Math.round(metadata.readingTime.minutes)} minutos de lectura
         </div>
-      </div>
+      </Icons>
     </div>
   );
 }

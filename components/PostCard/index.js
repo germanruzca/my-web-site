@@ -2,7 +2,6 @@ import { PostCard, Title, VerticalLine, CardInfo, CardIcons, EachIcon } from './
 import { IconCalendar, IconComment, IconClock } from "../icons";
 import { formatDate } from "../../lib/format_date";
 import Link from 'next/link'
-import { IconArrow } from '../icons';
 import readingTime from "reading-time";
 
 const Component = ({post}) => {

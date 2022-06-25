@@ -1,12 +1,13 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link'
 import { PostCard, Header } from '../components'
-import styles from '../styles/Blog.module.css';
+import { Text, Box } from '../components/elements'
+import { useMediaQuery } from '@chakra-ui/react'
+
 
 import { getAllFilesMetaData } from '../lib/mdx';
 
 export default function Blog({ posts }) {
+    const [isSmallerThan450] = useMediaQuery('(max-width: 450px)')
   return (
     <div>
       <Head>
@@ -15,21 +16,17 @@ export default function Blog({ posts }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
-      <main className={styles.container}>
-        <div className={styles.last_posts}>
-          Posts
-        </div>
-          <div className={styles.description}>
-              Bienvenido a mi blog, aqui podras escontrar mis escritos sobre diferentes temas que pueden resultar de tu agrado.
-          </div>
-        <div className={styles.posts}>
+      <Box maxW={960} margin={isSmallerThan450 ? 20 : (0, 'auto')} display={'flex'} flexDir={'column'}>
+          <Text fontSize={isSmallerThan450 ? 40 : 50} margin={0} fontWeight={700} >Posts</Text>
+          <Text fontSize={18} textAlign={'justify'}>Bienvenido a mi blog, aqui podras escontrar mis escritos sobre diferentes temas que pueden resultar de tu agrado.</Text>
+        <div>
           {
               posts.map((post) => (
                 <PostCard key={post.id} post={post}/>
               ))
           }
         </div>
-      </main>
+      </Box>
     </div>
   );
 };
