@@ -3,8 +3,7 @@ import { MDXRemote } from 'next-mdx-remote';
 import { getFileBySlug, getFiles } from '../lib/mdx';
 import MDXComponents from '../components/MDXComponents'
 import { Header } from '../components';
-import styles from '../styles/Post.module.css';
-import { Layout } from '../components/Layout';
+import { LayoutPost } from '../components';
 
 export default function Post({ source, frontmatter}) {
   return (
@@ -16,10 +15,10 @@ export default function Post({ source, frontmatter}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
-      <div className={styles.container}>
-        <Layout metadata={frontmatter}>
+      <div>
+        <LayoutPost metadata={frontmatter}>
           <MDXRemote {...source} components={MDXComponents}/>
-        </Layout>
+        </LayoutPost>
       </div>
     </div>
   )
