@@ -9,6 +9,8 @@ export {
   FaStar as IconStar,
   FaRegStar as IconStarEmpty,
   FaArrowAltCircleRight as IconArrow,
+  FaInstagram as IconInstagramF,
+  FaLinkedin as IconLinkedinF
 } from "react-icons/fa";
 
 export {
@@ -28,3 +30,7 @@ export {
   MdVideoLibrary as IconVideo,
   MdSchool as IconStudy,
 } from "react-icons/md";
+
+export {
+  SiGmail as IconGmail
+} from 'react-icons/si'

@@ -1,21 +1,11 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link'
-import styles from '../styles/Home.module.css';
 import { Header } from '../components'
-
-// import the library
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode, faHighlighter } from '@fortawesome/free-solid-svg-icons';
-import {
-  faGithub, 
-  faTwitter,
-  faInstagram,
-  faLinkedin
-} from '@fortawesome/free-brands-svg-icons';
+import { Box, Text, useMediaQuery, Image } from '@chakra-ui/react'
+import { IconGithub, IconLinkedinF, IconTwitter, IconInstagramF, IconGmail} from "../components/icons";
+import vector from '../components/assets/img/blob.svg'
 
 export default function Home() {
+  const [isSmallerThan450] = useMediaQuery('(max-width: 450px)')
   return (
     <div>
       <Head>
@@ -24,35 +14,49 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.container}>
-        <Header/>
-        <div className={styles.name}>
-          <div>Germán Ruiz</div>
-          <div className={styles.position}>Web Developer</div>
-        </div>
-        <div className={styles.icon}>
-          <div>
-            <a href="https://twitter.com/germanruzca" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faTwitter}/>
-            </a>
-          </div>
-          <div>
-            <a href="https://github.com/germanruzca" target="_blank"  rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faGithub}/>
-            </a>
-          </div>
-          <div>
-            <a href="https://www.instagram.com/germanruzca/" target="_blank"  rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faInstagram}/>
-            </a>
-          </div>
-          <div>
-            <a href="https://www.linkedin.com/in/germanruzca/" target="_blank"  rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faLinkedin}/>
-            </a>
-          </div>
-        </div>
-      </main>
+      <Header/>
+      <Box as={'main'} display={"flex"} maxW={960} margin={(0, 'auto')} minH={600} textAlign={isSmallerThan450 ? "center" : ''} alignItems={"center"}>
+        <Box>
+          <Box>
+            <Text margin={0} fontSize={20} fontWeight={700}>
+              Hola! soy
+            </Text>
+            <Text margin={0} fontSize={80} fontWeight={700} fontFamily={'Roboto, sans-serif'}>
+              German Ruiz
+            </Text>
+            <Text margin={0} fontSize={35} fontWeight={700}>
+              Software Engineer
+            </Text>
+          </Box>
+          <Box color={`#EABE7F`} fontSize={40} marginTop={40} display={"flex"} justifyContent={isSmallerThan450 ? 'center': ''}>
+            <Box marginRight={20}>
+              <a href={'https://github.com/germanruzca'}  target={'_blank'} rel="noreferrer">
+                <IconGithub/>
+              </a>
+            </Box>
+            <Box marginRight={20}>
+              <a href={'https://www.linkedin.com/in/germanruzca/'}  target={'_blank'} rel="noreferrer">
+                <IconLinkedinF/>
+              </a>
+            </Box>
+            <Box marginRight={20}>
+              <a href={'https://twitter.com/germanruzca'}  target={'_blank'} rel="noreferrer">
+                <IconTwitter/>
+              </a>
+            </Box>
+            <Box marginRight={20}>
+              <a href={'https://www.instagram.com/germanruzca/'} target={'_blank'} rel="noreferrer" >
+                <IconInstagramF/>
+              </a>
+            </Box>
+            <Box marginRight={20}>
+              <a href={'mailto:germanruzca@gmail.com'}>
+                <IconGmail/>
+              </a>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
     </div>
   )
 }
