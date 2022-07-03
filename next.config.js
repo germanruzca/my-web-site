@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
 
   // Prefer loading of ES Modules over CommonJS
-  experimental: { esmExternals: true },
+  compiler: { styledComponents: true },
   // Support MDX files as pages:
   pageExtensions: ['md', 'mdx', 'tsx', 'ts', 'jsx', 'js'],
   // Support loading `.md`, `.mdx`:

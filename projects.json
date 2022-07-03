@@ -2,7 +2,7 @@
   "projects" : [
     {
       "id": 1,
-      "name": "coli-market",
+      "name": "Coli-market",
       "image": "https://raw.githubusercontent.com/germanruzca/images/master/colimarket.png",
       "description": "Coli-market fue un proyecto hecho en el bootcamp de BrightCoders Academy. Con el propostio de entender la tecnolgia de Rails. \nEs una e-commerce local, donde esta enfocada ayudar a los comerciantes locales de la comunidad de Colima.",
       "technologies" : [

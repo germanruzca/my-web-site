@@ -19,13 +19,11 @@ export default function Blog({ posts }) {
       <Box maxW={960} margin={isSmallerThan450 ? 20 : (0, 'auto')} display={'flex'} flexDir={'column'}>
           <Text fontSize={isSmallerThan450 ? 40 : 50} margin={0} fontWeight={700} >Posts</Text>
           <Text fontSize={18} textAlign={'justify'}>Bienvenido a mi blog, aqui podras escontrar mis escritos sobre diferentes temas que pueden resultar de tu agrado.</Text>
-        <div>
           {
-              posts.map((post) => (
-                <PostCard key={post.id} post={post} style={{'margin-top': '20px'}}/>
+              posts.map((post, id) => (
+                <PostCard key={post.id} post={post} style={{'margin-top': '20px'}} key={`post-card-${id}`}/>
               ))
           }
-        </div>
       </Box>
     </div>
   );

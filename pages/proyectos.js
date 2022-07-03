@@ -1,12 +1,15 @@
 import Head from 'next/head';
-import styles from '../styles/Project.module.css';
 import {Header} from '../components/Header'
 import { ProjectCard } from '../components/ProjectCard';
+import { Text, Box } from '../components/elements'
+import { useMediaQuery } from '@chakra-ui/react'
+
 import data from '../projects.json'
 
 export default function Proyectos() {
+    const [isSmallerThan450] = useMediaQuery('(max-width: 450px)');
 
-  return (
+    return (
     <div>
       <Head>
         <title>Proyectos - germanruzca</title>
@@ -14,14 +17,14 @@ export default function Proyectos() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
-      <h1 className={styles.title}>Portafolio</h1>
-      <div className={styles.container}>
-       { 
-        data.projects.map((project, index) => (
-          <ProjectCard data={project} key={index}/> 
-        ))
-      }
-      </div>
+        <Box maxW={960} margin={isSmallerThan450 ? 20 : (0, 'auto')} display={'flex'} flexDir={'column'}>
+            <Text fontSize={isSmallerThan450 ? 40 : 50} margin={0} fontWeight={700} >Proyectos</Text>
+            {
+                data.projects.map((project, index) => (
+                    <ProjectCard data={project} key={index}/>
+                ))
+            }
+        </Box>
     </div>
   );
 }

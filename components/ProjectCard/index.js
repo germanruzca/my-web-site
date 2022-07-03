@@ -1,44 +1,42 @@
-import styles from '../../styles/ProjectCard.module.css';
+import {ProjectCard, Title, VerticalLine, CardInfo, Description, Icons, EachIcon} from './styled'
+import { Text } from '@chakra-ui/react'
 import {IconGithub, IconNewTab} from '../icons';
 
 const Component = ({data}) => {
   return (
-    <div className={styles.card}>
-      <div>
-        <h1 className={styles.card__title}>{data.name}</h1>
-      </div>
-      <div className={styles.card__project__info}>
-        <div className={styles.image__container}>
-          <img className={styles.card__image} src={data.image} alt={data.name}/>
-        </div>
-        <div className={styles.description__container}>
-          <p className={styles.card__description}>{data.description}</p>
-          <p className={styles.card__description__used_tech}>Tecnologias usadas:</p>
-          <p className={styles.card__technologies}>
+    <ProjectCard>
+        <VerticalLine>
+            <div></div>
+        </VerticalLine>
+      <CardInfo>
+
+          <Title >{data.name}</Title>
+        <Description >
+          <Text margin={0} marginBottom={20}>{data.description}</Text>
+          <Text fontWeight={700} margin={0}>Tecnologias usadas:</Text>
+          <Text margin={0}>
               {
                 data.technologies.map(technology => (
                   technology == data.technologies[data.technologies.length - 1] ? ` ${technology}.` : ` ${technology},`
 
                 ))
               }
-          </p>
-        </div>
-      </div>
-      <div className={styles.card__links}>
-        <div className={styles.card__links__each}>
-          <div className={styles.links__card}>
-            <a href={data.github} target="_blank" rel="noopener noreferrer">
-              <IconGithub/> Repositorio
-            </a>
-          </div>
-          <div className={styles.links__card}>
-            <a href={data.demo} target="_blank" rel="noopener noreferrer">
-              <IconNewTab/> Demo
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+          </Text>
+        </Description>
+          <Icons>
+              <EachIcon>
+                <IconGithub/>
+                  <Text margin={0} fontSize={18}>Repo</Text>
+              </EachIcon>
+              <EachIcon>
+
+                <IconNewTab/>
+                  <Text margin={0} fontSize={18}>Demo</Text>
+              </EachIcon>
+          </Icons>
+
+      </CardInfo>
+    </ProjectCard>
   )
 }
 
