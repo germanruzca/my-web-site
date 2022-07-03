@@ -24,15 +24,19 @@ const Component = ({data}) => {
           </Text>
         </Description>
           <Icons>
-              <EachIcon>
-                <IconGithub/>
-                  <Text margin={0} fontSize={18}>Repo</Text>
-              </EachIcon>
-              <EachIcon>
+              <a href={data.repo} target={'_blank'} rel={'noreferrer'}>
+                  <EachIcon>
+                      <IconGithub/>
+                      <Text margin={0} fontSize={18}>Repo</Text>
+                  </EachIcon>
+              </a>
+              <a href={data.demo} target={'_blank'} rel={'noreferrer'}>
+                  <EachIcon>
 
-                <IconNewTab/>
-                  <Text margin={0} fontSize={18}>Demo</Text>
-              </EachIcon>
+                      <IconNewTab/>
+                      <Text margin={0} fontSize={18}>Demo</Text>
+                  </EachIcon>
+              </a>
           </Icons>
 
       </CardInfo>
