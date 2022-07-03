@@ -44,7 +44,7 @@ export default function AboutMe() {
           </Text>
 
           <Text textAlign={"justify"} lineHeight={1.5} fontSize={18}>
-            <strong>Como</strong>: Software Engeneer Aprentiship en <a target={'_blank'} href={'https://salesloft.com/'}>Salesloft</a> 🧑🏻‍💻
+            <strong>Como</strong>: Software Engeneer Aprentiship en <a target={'_blank'} href={'https://salesloft.com/'} rel="noreferrer">Salesloft</a> 🧑🏻‍💻
           </Text>
 
           <Text textAlign={"justify"} lineHeight={1.5} fontSize={18}>

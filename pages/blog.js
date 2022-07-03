@@ -21,7 +21,7 @@ export default function Blog({ posts }) {
           <Text fontSize={18} textAlign={'justify'}>Bienvenido a mi blog, aqui podras escontrar mis escritos sobre diferentes temas que pueden resultar de tu agrado.</Text>
           {
               posts.map((post, id) => (
-                <PostCard key={post.id} post={post} style={{'margin-top': '20px'}} key={`post-card-${id}`}/>
+                <PostCard key={post.id} post={post} style={{'margin-top': '20px'}}/>
               ))
           }
       </Box>
