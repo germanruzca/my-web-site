@@ -18,14 +18,16 @@ const Component = () => {
       </Route>
       <Route routeColor={router.pathname === '/resume'}>
         <Link href="/resume">
-          <a>Resumé</a>
+          <a>About</a>
         </Link>
       </Route>
-      <Route routeColor={router.pathname === '/proyectos'}>
-        <Link href="/proyectos">
-          <a>Proyectos</a>
-        </Link>
-      </Route>
+      <div style={{display:"none"}}>
+          <Route routeColor={router.pathname === '/proyectos'}>
+              <Link href="/proyectos">
+                  <a>Proyectos</a>
+              </Link>
+          </Route>
+      </div>
     </Header>
   );
 }

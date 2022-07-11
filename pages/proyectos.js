@@ -17,8 +17,8 @@ export default function Proyectos() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
-        <Box maxW={960} margin={isSmallerThan450 ? 20 : (0, 'auto')} display={'flex'} flexDir={'column'}>
-            <Text fontSize={isSmallerThan450 ? 40 : 50} margin={0} fontWeight={700} >Proyectos</Text>
+        <Box maxW={960} margin={isSmallerThan450 ? 20 : (0, 'auto')} display={'flex'} flexDir={'column'} opacity={.2}>
+            <Text fontSize={isSmallerThan450 ? 40 : 50} margin={0} fontWeight={700}>Proyectos - <strong>Sección archivada</strong></Text>
             {
                 data.projects.map((project, index) => (
                     <ProjectCard data={project} key={index}/>

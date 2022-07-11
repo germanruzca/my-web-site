@@ -8,6 +8,8 @@ import { getAllFilesMetaData } from '../lib/mdx';
 
 export default function Blog({ posts }) {
     const [isSmallerThan450] = useMediaQuery('(max-width: 450px)');
+    const archivedPosts = ['mi-primer-bootcamps']
+
   return (
     <div>
       <Head>
@@ -20,9 +22,11 @@ export default function Blog({ posts }) {
           <Text fontSize={isSmallerThan450 ? 40 : 50} margin={0} fontWeight={700} >Posts</Text>
           <Text fontSize={18} textAlign={'justify'}>Bienvenido a mi blog, aqui podras escontrar mis escritos sobre diferentes temas que pueden resultar de tu agrado.</Text>
           {
-              posts.map((post, id) => (
-                <PostCard key={post.id} post={post} style={{'margin-top': '20px'}}/>
-              ))
+              posts.sort((a, b) => new Date(b.date) - new Date(a.date)).map((post, id) => {
+                  if (!archivedPosts.includes(post.slug))
+                      return <PostCard key={post.id} post={post} style={{'margin-top': '20px'}}/>
+                  }
+              )
           }
       </Box>
     </div>

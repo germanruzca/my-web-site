@@ -33,7 +33,7 @@ const Component = ({post}) => {
                       : (
                           <EachIcon>
                             <IconClock/>
-                            <p>{parseInt((readingTime(post.content).minutes))} min</p>
+                            <p>{parseInt((readingTime(post.content).minutes)) === 0 ? 'Menos de un minuto' : `${parseInt((readingTime(post.content).minutes))} min`}</p>
                           </EachIcon>
                       )
                 }
