@@ -24,5 +24,5 @@ export const Header = styled.div`
 `;
 
 export const Route = styled.div`
-    color: #00000;
+    color: ${props => props.routeColor ? props.theme.colors.secondColorPage : props.theme.colors.black}
 `;

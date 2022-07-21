@@ -7,27 +7,14 @@ const Component = () => {
   return (
     <Header>
       <Route routeColor={router.pathname === '/'} >
-        <Link href="/">
-          <a>Inicio</a>
-        </Link>
+          <a href="/">Inicio</a>
       </Route>
       <Route routeColor={router.pathname === '/blog' || router.pathname === '/[slug]'}>
-        <Link href="/blog">
-          <a>Blog</a>
-        </Link>
+          <a href="/blog">Blog</a>
       </Route>
       <Route routeColor={router.pathname === '/resume'}>
-        <Link href="/resume">
-          <a>About</a>
-        </Link>
+          <a href="/resume">About</a>
       </Route>
-      <div style={{display:"none"}}>
-          <Route routeColor={router.pathname === '/proyectos'}>
-              <Link href="/proyectos">
-                  <a>Proyectos</a>
-              </Link>
-          </Route>
-      </div>
     </Header>
   );
 }
