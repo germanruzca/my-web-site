@@ -24,5 +24,5 @@ export const Header = styled.div`
 `;
 
 export const Route = styled.div`
-    color: #FFFFFF;
+    color: #00000;
 `;
