@@ -1,6 +1,5 @@
 import { Header, Route } from "./styled";
 import { useRouter } from 'next/router'
-import Link from 'next/link'
 
 const Component = () => {
   const router = useRouter();
